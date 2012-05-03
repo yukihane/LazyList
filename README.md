@@ -1,3 +1,6 @@
+This fork is an Eclipse Android library project. 
+Import to your workspace, add as a library to your project and away you go. :)
+
 # LazyList
 
 A simple library to display images in Android ListView. Images are being downloaded asynchronously in the background. Images are being cached on SD card and in memory. Can also be used for GridView and just to display images into an ImageView.
