@@ -33,7 +33,7 @@ public class ImageLoader {
     }
     
     int stub_id;
-    public void DisplayImage(String url, ImageView imageView)
+    public void displayImage(String url, ImageView imageView)
     {
         imageViews.put(imageView, url);
         Bitmap bitmap=memoryCache.get(url);
