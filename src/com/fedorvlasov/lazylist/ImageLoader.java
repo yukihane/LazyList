@@ -26,12 +26,13 @@ public class ImageLoader {
     private Map<ImageView, String> imageViews=Collections.synchronizedMap(new WeakHashMap<ImageView, String>());
     ExecutorService executorService; 
     
-    public ImageLoader(Context context){
+    public ImageLoader(Context context, int stubDrawable){
         fileCache=new FileCache(context);
         executorService=Executors.newFixedThreadPool(5);
+        stub_id = stubDrawable;
     }
     
-    final int stub_id=R.drawable.stub;
+    int stub_id;
     public void DisplayImage(String url, ImageView imageView)
     {
         imageViews.put(imageView, url);
