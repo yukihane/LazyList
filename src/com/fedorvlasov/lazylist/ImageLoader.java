@@ -25,13 +25,13 @@ public class ImageLoader {
     FileCache fileCache;
     private Map<ImageView, String> imageViews=Collections.synchronizedMap(new WeakHashMap<ImageView, String>());
     ExecutorService executorService; 
-    
-    public ImageLoader(Context context, int stubDrawable){
-        fileCache=new FileCache(context);
-        executorService=Executors.newFixedThreadPool(5);
+
+    public ImageLoader(Context context, String cacheDir, int stubDrawable) {
+        fileCache = new FileCache(context, cacheDir);
+        executorService = Executors.newFixedThreadPool(5);
         stub_id = stubDrawable;
     }
-    
+
     int stub_id;
     public void displayImage(String url, ImageView imageView)
     {
